@@ -1,0 +1,25 @@
+#opcionaisContainer {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#opcionaisTitle {
+  width: 100%;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: flex-start;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.checkboxContainer span,
+.checkboxContainer input {
+  width: auto;
+}
+
+.checkboxContainer span {
+  margin-left: 6px;
+  font-weight: bold;
+}

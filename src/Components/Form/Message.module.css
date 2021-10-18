@@ -1,0 +1,19 @@
+.sucess,
+.fail {
+  border-radius: 5px;
+  padding: 10px !important;
+  max-width: 400px;
+  margin: 30px auto;
+}
+
+.sucess {
+  color: #004085;
+  background-color: #cce5ff;
+  border: 2px solid #b8daff;
+}
+
+.fail {
+  color: #ffffff;
+  background-color: #ff7373;
+  border: 2px solid #ff6868;
+}
