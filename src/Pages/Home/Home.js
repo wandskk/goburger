@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Home.module.css';
-import Banner from '../Components/Banner';
-import FormBurger from '../Components/Form/FormBurger';
+import FormBurger from '../../Components/Form/FormBurger';
+import Banner from '../../Components/Banner/Banner';
 
 const Home = () => {
   return (

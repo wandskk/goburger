@@ -4,7 +4,7 @@ import './FormBurger.css';
 import Select from './Select.js';
 import Checkbox from './Checkbox.js';
 import Button from './Button.js';
-import Message from './Message.js';
+import Message from '../Message/Message.js';
 
 const Form = () => {
   const [data, setData] = React.useState(null);
@@ -32,7 +32,7 @@ const Form = () => {
 
     const dataJson = JSON.stringify(body);
 
-    const response = await fetch('http://localhost:4000/', {
+    const response = await fetch('http://localhost:4000/burgers', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: dataJson,
