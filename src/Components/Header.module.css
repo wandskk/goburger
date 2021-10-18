@@ -1,0 +1,27 @@
+.header {
+  background-color: #222222;
+  border-bottom: 0.3rem solid #000;
+}
+
+.headerRow {
+  align-items: center;
+}
+
+.logo img {
+  width: 12rem !important;
+}
+
+.nav {
+  float: right;
+}
+
+.nav a {
+  font-size: 1.05rem;
+  margin-right: 2rem;
+  color: #fcac17;
+  transition: 0.5s;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}

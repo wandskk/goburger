@@ -1,0 +1,9 @@
+* {
+  font-family: Helvetica;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
