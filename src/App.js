@@ -12,8 +12,10 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/pedidos" element={<Pedidos />} />
+          <div className="">
+            <Route path="/" element={<Home />} />
+            <Route path="/pedidos" element={<Pedidos />} />
+          </div>
         </Routes>
         <Footer />
       </BrowserRouter>

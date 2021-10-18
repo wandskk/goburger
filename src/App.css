@@ -7,3 +7,7 @@
 a {
   text-decoration: none !important;
 }
+
+.main {
+  min-height: 400px !important;
+}
