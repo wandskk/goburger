@@ -1,0 +1,21 @@
+.banner {
+  background-image: url('../Assets/img/burger.jpg');
+  background-position: 0 -250px;
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 10px 10px 10px #e1e1e1;
+}
+
+.title {
+  margin-top: 10px;
+  background-color: #222222;
+  padding: 0.4rem 3rem !important;
+  width: fit-content;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 4px solid #fcac17;
+}
