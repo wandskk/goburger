@@ -12,7 +12,12 @@ const Dashboard = () => {
   async function getBurgers() {
     const res = await fetch(API_URL + '/burgers');
     const json = await res.json();
-    setData(json);
+
+    if (json.length > 0) {
+      setData(json);
+    } else {
+      setData(null);
+    }
   }
 
   React.useEffect(() => {
@@ -80,6 +85,7 @@ const Dashboard = () => {
               </tbody>
             </table>
           )}
+          {data === null && <h1>Não há pedidos ainda.</h1>}
         </div>
       </div>
     </div>
