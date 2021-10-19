@@ -67,7 +67,7 @@ const Dashboard = () => {
                         ))}
                       </ul>
                     </td>
-                    <td>
+                    <td className={styles.actions}>
                       <UpdateStatusBurger
                         burgerStatus={status}
                         burgerId={id}

@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './DeleteBurger.module.css';
 import { API_URL } from '../../api';
 
 const DeleteBurger = ({ id, getBurgers, setMsg }) => {
@@ -23,7 +22,7 @@ const DeleteBurger = ({ id, getBurgers, setMsg }) => {
     setTimeout(() => setMsg(null), 3000);
   }
   return (
-    <button className={styles.deleteBtn} onClick={deleteBurger}>
+    <button className="deleteBtn" onClick={deleteBurger}>
       Cancelar
     </button>
   );

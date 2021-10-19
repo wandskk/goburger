@@ -82,15 +82,27 @@
       "nome": "Jeferson",
       "carne": "Alcatra",
       "pao": "3 Queijos",
-      "opcionais": ["Bacon", "Cheddar", "Salame", "Tomate", "Cebola roxa"],
-      "status": "Solicitado",
+      "opcionais": [
+        "Bacon",
+        "Cheddar",
+        "Salame",
+        "Tomate",
+        "Cebola roxa"
+      ],
+      "status": "Em produção",
       "id": 1
     },
     {
       "nome": "Jeferson",
       "carne": "Alcatra",
       "pao": "3 Queijos",
-      "opcionais": ["Bacon", "Cheddar", "Salame", "Tomate", "Cebola roxa"],
+      "opcionais": [
+        "Bacon",
+        "Cheddar",
+        "Salame",
+        "Tomate",
+        "Cebola roxa"
+      ],
       "status": "Em produção",
       "id": 2
     },
@@ -98,7 +110,13 @@
       "nome": "Marcos",
       "carne": "Alcatra",
       "pao": "3 Queijos",
-      "opcionais": ["Bacon", "Cheddar", "Salame", "Tomate", "Cebola roxa"],
+      "opcionais": [
+        "Bacon",
+        "Cheddar",
+        "Salame",
+        "Tomate",
+        "Cebola roxa"
+      ],
       "status": "Finalizado",
       "id": 3
     }
