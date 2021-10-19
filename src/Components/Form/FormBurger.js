@@ -3,7 +3,7 @@ import InputText from './InputText.js';
 import './FormBurger.css';
 import Select from './Select.js';
 import Checkbox from './Checkbox.js';
-import Button from './Button.js';
+import Button from './Submit.js';
 import Message from '../Message/Message.js';
 
 const Form = () => {

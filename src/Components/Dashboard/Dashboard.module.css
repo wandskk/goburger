@@ -1,0 +1,17 @@
+.burgerTable {
+  padding-top: 2rem !important;
+}
+
+.burgerTable p,
+.burgerTable ul,
+.burgerTable select {
+  margin: 1rem 0 !important;
+}
+
+.burgerTable ul {
+  list-style: none !important;
+}
+
+.burgerTable select {
+  width: fit-content !important;
+}

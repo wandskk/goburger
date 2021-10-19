@@ -5,7 +5,7 @@ import Banner from '../../Components/Banner/Banner';
 
 const Home = () => {
   return (
-    <div>
+    <div className="content">
       <Banner />
       <h1 className={styles.title}>Monte o seu burger:</h1>
       <FormBurger />

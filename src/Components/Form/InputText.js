@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Input = ({ id, label, value, setValue }) => {
-  const [error, setError] = React.useState('');
   return (
     <div className="inputContainer">
       <label htmlFor={id}>{label}</label>
