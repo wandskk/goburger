@@ -6,6 +6,7 @@ const Message = ({ msg, setMsg, className }) => {
     const myTimer = setTimeout(() => setMsg(null), 3000);
     return () => clearInterval(myTimer);
   }, []);
+
   return <p className={styles[className]}>{msg.text}</p>;
 };
 

@@ -4,6 +4,7 @@ import DeleteBurger from './DeleteBurger';
 import UpdateStatusBurger from './UpdateStatusBurger';
 import { API_URL } from '../../api';
 import Message from '../Message/Message';
+import Loading from '../Loading/Loading';
 
 const Dashboard = () => {
   const [data, setData] = React.useState(null);
