@@ -6,6 +6,7 @@
 .burgerTable ul,
 .burgerTable select {
   margin: 1rem 0 !important;
+  font-size: 0.8rem !important;
 }
 
 .burgerTable ul {
