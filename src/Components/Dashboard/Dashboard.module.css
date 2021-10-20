@@ -4,6 +4,7 @@
 
 .burgerTable p,
 .burgerTable ul,
+.burgerTable button,
 .burgerTable select {
   margin: 1rem 0 !important;
   font-size: 0.8rem !important;
@@ -21,7 +22,6 @@
 .burgerTable button {
   width: 60% !important;
   height: 2rem !important;
-  font-size: 0.7rem !important;
 }
 
 .burgerTable button {
