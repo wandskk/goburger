@@ -1,10 +1,9 @@
 import React from 'react';
 import styles from './Dashboard.module.css';
-import DeleteBurger from './DeleteBurger';
-import UpdateStatusBurger from './UpdateStatusBurger';
 import { API_URL } from '../../api';
 import Message from '../Message/Message';
 import Title from '../../Components/Title/Title';
+import Table from './Table';
 
 const Dashboard = () => {
   const [data, setData] = React.useState(null);
@@ -37,58 +36,13 @@ const Dashboard = () => {
           {data && data.length !== 0 && (
             <>
               <Title text="Lista de pedidos" />
-              <table className="table">
-                {console.log(data)}
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Cliente:</th>
-                    <th scope="col">Pão:</th>
-                    <th scope="col">Carne:</th>
-                    <th scope="col">Opcionais:</th>
-                    <th scope="col">Ações:</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {data.map(({ id, nome, carne, pao, opcionais, status }) => (
-                    <tr key={id}>
-                      <th scope="row">
-                        <p>{id}</p>
-                      </th>
-                      <td>
-                        <p>{nome}</p>
-                      </td>
-                      <td>
-                        <p>{pao}</p>
-                      </td>
-                      <td>
-                        <p>{carne}</p>
-                      </td>
-                      <td>
-                        <ul>
-                          {opcionais.map((opcao) => (
-                            <li key={opcao + Math.random()}>{opcao}</li>
-                          ))}
-                        </ul>
-                      </td>
-                      <td className={styles.actions}>
-                        <UpdateStatusBurger
-                          burgerStatus={status}
-                          burgerId={id}
-                          msg={msg}
-                          setMsg={setMsg}
-                        />
-                        <br />
-                        <DeleteBurger
-                          id={id}
-                          getBurgers={getBurgers}
-                          setMsg={setMsg}
-                        />
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <Table
+                data={data}
+                styles={styles}
+                msg={msg}
+                setMsg={setMsg}
+                getBurgers={getBurgers}
+              />
             </>
           )}
           {data && data.length === 0 && <h1>Não há pedidos ainda.</h1>}

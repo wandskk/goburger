@@ -9,7 +9,8 @@
   top: 0.7rem;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: test 0.8s;
+  animation: slide-down 0.5s;
+  z-index: 10;
 }
 
 .create {
@@ -20,8 +21,8 @@
 
 .error {
   color: #ffffff;
-  background-color: #ff7373;
-  border: 2px solid #ff6868;
+  background-color: #f00;
+  border: 2px solid #f00f0e;
 }
 
 .updated {
@@ -30,16 +31,7 @@
   border: 2px solid #febc1b;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes test {
+@keyframes slide-down {
   from {
     top: -5rem;
     left: 50%;

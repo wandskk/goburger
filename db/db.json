@@ -54,11 +54,11 @@
         "tipo": "Tomate"
       },
       {
-        "id": 4,
+        "id": 5,
         "tipo": "Cebola roxa"
       },
       {
-        "id": 4,
+        "id": 6,
         "tipo": "Pepino"
       }
     ]
@@ -103,6 +103,30 @@
       ],
       "status": "Solicitado",
       "id": 2
+    },
+    {
+      "nome": "Wanderson",
+      "carne": "Maminha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon",
+        "Salame",
+        "Pepino"
+      ],
+      "status": "Solicitado",
+      "id": 3
+    },
+    {
+      "nome": "Wanderson",
+      "carne": "Veggie burger",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Tomate",
+        "Cheddar",
+        "Salame"
+      ],
+      "status": "Solicitado",
+      "id": 4
     }
   ]
 }

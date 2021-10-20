@@ -1,14 +1,21 @@
 import React from 'react';
 
-const Select = ({ label, name, id, text, options, value, setValue }) => {
+const Select = ({ id, options, text, onChange, value, onBlur, error }) => {
+  function handleClick() {
+    let input = document.getElementById(id);
+    input.classList.remove('inputError');
+  }
   return (
     <div className="inputContainer">
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id}>{text}</label>
       <select
         value={value !== '' ? value : ''}
-        onChange={({ target }) => setValue(target.value)}
-        name={name}
+        onChange={onChange}
+        onBlur={onBlur}
+        name={value}
+        onClick={handleClick}
         id={id}
+        className={error ? 'inputError' : ''}
       >
         <option disabled value="">
           {text}
@@ -19,6 +26,7 @@ const Select = ({ label, name, id, text, options, value, setValue }) => {
           </option>
         ))}
       </select>
+      {error && <p className="formValidate">{error}</p>}
     </div>
   );
 };

@@ -4,16 +4,16 @@ import './FormBurger.css';
 import Select from './Select.js';
 import Checkbox from './Checkbox.js';
 import Button from './Submit.js';
-import Message from '../Message/Message.js';
+import useForm from '../../Hooks/useForm';
+import { API_URL } from '../../api';
 
-const Form = () => {
+const Form = ({ msg, setMsg }) => {
   const [data, setData] = React.useState(null);
-  const [msg, setMsg] = React.useState(null);
 
-  const [name, setName] = React.useState('');
-  const [bread, setBread] = React.useState('');
-  const [meat, setMeat] = React.useState('');
-  const [options, setOptions] = React.useState('');
+  const name = useForm();
+  const bread = useForm();
+  const meat = useForm();
+  const options = useForm(false);
 
   async function getData() {
     const response = await fetch(`http://localhost:4000/ingredientes`);
@@ -21,7 +21,7 @@ const Form = () => {
     setData(json);
   }
 
-  async function createBurger() {
+  async function createBurger(name, meat, bread, options) {
     const body = {
       nome: name,
       carne: meat,
@@ -32,25 +32,19 @@ const Form = () => {
 
     const dataJson = JSON.stringify(body);
 
-    const response = await fetch('http://localhost:4000/burgers', {
+    const response = await fetch(`${API_URL}/burgers`, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: dataJson,
     });
 
     if (response.ok === true) {
-      setMsg({ text: 'Pedido realizado com sucesso!', className: 'create' });
+      setMsg({ text: 'Pedido realizado!', className: 'create' });
       console.log('Deu certo!');
     } else {
       setMsg({ text: 'Ops, algo deu errado :( ', className: 'error' });
       console.log('Deu errado!');
     }
-
-    // clear form
-    setName('');
-    setMeat('');
-    setBread('');
-    setOptions('');
   }
 
   React.useEffect(() => {
@@ -59,48 +53,59 @@ const Form = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    createBurger();
+    name.validate();
+    bread.validate();
+    meat.validate();
+    if (name.validate() && bread.validate() && meat.validate()) {
+      name.setValue('');
+      meat.setValue('');
+      bread.setValue('');
+      for (let i = 0; i < data.opcionais.length; i++) {
+        document.getElementById(data.opcionais[i].tipo).checked = false;
+      }
+      options.setValue([]);
+      createBurger(name.value, meat.value, bread.value, options.value);
+    }
   }
 
   if (data === null) return null;
   const { paes, carnes, opcionais } = data;
   return (
-    <form onSubmit={handleSubmit} id="burgerForm">
-      {msg !== null && (
-        <Message msg={msg} setMsg={setMsg} className={msg.className} />
-      )}
-      <InputText
-        id="clientName"
-        label="Nome do Cliente"
-        value={name}
-        setValue={setName}
-      />
-      <Select
-        label="Escolha o pão:"
-        name="pao"
-        id="pao"
-        text="Selecione o seu pão"
-        options={paes}
-        value={bread}
-        setValue={setBread}
-      />
-      <Select
-        label="Escolha a carne do seu Burger:"
-        name="carne"
-        id="carne"
-        text="Selecione o tipo de carne"
-        options={carnes}
-        value={meat}
-        setValue={setMeat}
-      />
-      <Checkbox
-        label="Selecione os opcionais:"
-        data={opcionais}
-        checkbox={options}
-        setCheckbox={setOptions}
-      />
-      <Button />
-    </form>
+    <>
+      <form onSubmit={handleSubmit} id="burgerForm">
+        <InputText
+          label="Nome do cliente:"
+          id="nome"
+          placeholder="Digite seu nome"
+          value={name.value}
+          {...name}
+        />
+        <Select
+          label="Escolha o pão:"
+          name="pao"
+          id="pao"
+          text="Selecione o seu pão"
+          options={paes}
+          value={bread.value}
+          {...bread}
+        />
+        <Select
+          label="Escolha a carne do seu Burger:"
+          name="carne"
+          id="carne"
+          text="Selecione o tipo de carne"
+          options={carnes}
+          value={meat.value}
+          {...meat}
+        />
+        <Checkbox
+          label="Selecione os opcionais:"
+          options={opcionais}
+          {...options}
+        />
+        <Button />
+      </form>
+    </>
   );
 };
 

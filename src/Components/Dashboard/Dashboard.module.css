@@ -20,7 +20,8 @@
 
 .burgerTable select,
 .burgerTable button {
-  width: 60% !important;
+  width: 65% !important;
+  float: right;
   height: 2rem !important;
 }
 

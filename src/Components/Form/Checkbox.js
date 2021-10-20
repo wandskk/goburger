@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Checkbox = ({ data, checkbox, setCheckbox }) => {
+const Checkbox = ({ options, value, setValue }) => {
   function handleChange({ target }) {
     if (target.checked) {
-      setCheckbox([...checkbox, target.value]);
+      setValue([...value, target.value]);
     } else {
-      setCheckbox(checkbox.filter((checkbox) => checkbox !== target.value));
+      setValue(value.filter((checkbox) => checkbox !== target.value));
     }
   }
   return (
@@ -13,12 +13,13 @@ const Checkbox = ({ data, checkbox, setCheckbox }) => {
       <label id="opcionaisTitle" htmlFor="opcionais">
         Selecione os opcionais:
       </label>
-      {data.map(({ id, tipo }) => (
+      {options.map(({ id, tipo }) => (
         <div key={id + tipo} className="checkboxContainer">
           <input
             type="checkbox"
             name="opcionais"
             value={tipo}
+            id={tipo}
             onChange={handleChange}
           />
           <span>{tipo}</span>
