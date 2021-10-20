@@ -93,17 +93,15 @@
       "id": 1
     },
     {
-      "nome": "Jeferson",
-      "carne": "Alcatra",
-      "pao": "3 Queijos",
+      "nome": "Wanderson",
+      "carne": "Maminha",
+      "pao": "Italiano Branco",
       "opcionais": [
-        "Bacon",
-        "Cheddar",
         "Salame",
-        "Tomate",
-        "Cebola roxa"
+        "Bacon",
+        "Pepino"
       ],
-      "status": "Em produção",
+      "status": "Solicitado",
       "id": 2
     }
   ]
