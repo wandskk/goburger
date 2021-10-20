@@ -10,16 +10,13 @@ const DeleteBurger = ({ id, getBurgers, setMsg }) => {
     if (req.ok === true) {
       setMsg({
         text: `Pedido n°${id} cancelado com sucesso`,
-        className: 'blue',
+        className: 'error',
       });
     } else {
-      setMsg({ text: 'Ops, algo deu errado :( ', className: 'red' });
+      setMsg({ text: 'Ops, algo deu errado :( ', className: 'error' });
     }
 
     getBurgers();
-
-    // clear messsage
-    setTimeout(() => setMsg(null), 3000);
   }
   return (
     <button className="deleteBtn" onClick={deleteBurger}>

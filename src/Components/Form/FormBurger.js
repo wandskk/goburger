@@ -39,15 +39,12 @@ const Form = () => {
     });
 
     if (response.ok === true) {
-      setMsg({ text: 'Pedido realizado com sucesso!', className: 'sucess' });
+      setMsg({ text: 'Pedido realizado com sucesso!', className: 'create' });
       console.log('Deu certo!');
     } else {
-      setMsg({ text: 'Ops, algo deu errado :( ', className: 'fail' });
+      setMsg({ text: 'Ops, algo deu errado :( ', className: 'error' });
       console.log('Deu errado!');
     }
-
-    // clear messsage
-    setTimeout(() => setMsg(null), 3000);
 
     // clear form
     setName('');
@@ -69,7 +66,9 @@ const Form = () => {
   const { paes, carnes, opcionais } = data;
   return (
     <form onSubmit={handleSubmit} id="burgerForm">
-      {msg !== null && <Message text={msg.text} className={msg.className} />}
+      {msg !== null && (
+        <Message msg={msg} setMsg={setMsg} className={msg.className} />
+      )}
       <InputText
         id="clientName"
         label="Nome do Cliente"

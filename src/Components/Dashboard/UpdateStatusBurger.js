@@ -1,7 +1,7 @@
 import React from 'react';
 import { API_URL } from '../../api';
 
-const UpdateStatusBurger = ({ burgerStatus, burgerId, setMsg }) => {
+const UpdateStatusBurger = ({ burgerStatus, burgerId, msg, setMsg }) => {
   const [status, setStatus] = React.useState(null);
   const [select, setSelect] = React.useState(null);
 
@@ -12,6 +12,7 @@ const UpdateStatusBurger = ({ burgerStatus, burgerId, setMsg }) => {
   }
 
   async function handleChange({ target }) {
+    setMsg(null);
     const option = target.value;
 
     const dataJson = JSON.stringify({ status: option });
@@ -22,34 +23,38 @@ const UpdateStatusBurger = ({ burgerStatus, burgerId, setMsg }) => {
       body: dataJson,
     });
     const json = await response.json();
-    setSelect(json.status);
+
+    // Response verification
 
     if (response.ok === true) {
+      setSelect(json.status);
       setMsg({
         text: `Pedido n°${burgerId} atualizado com sucesso`,
-        className: 'blue',
+        className: 'updated',
       });
     } else {
       setMsg({ text: 'Ops, algo deu errado :( ', className: 'red' });
     }
-
-    // clear messsage
-    setTimeout(() => setMsg(null), 3000);
   }
 
   React.useEffect(() => {
     getStatus();
+    setSelect(burgerStatus);
   }, []);
 
   return (
-    <select value={burgerStatus} name="status" onChange={handleChange}>
-      {status !== null &&
-        status.map((s, index) => (
-          <option key={index} value={s.tipo}>
-            {s.tipo}
-          </option>
-        ))}
-    </select>
+    <>
+      {select && (
+        <select value={select} name="status" onChange={handleChange}>
+          {status !== null &&
+            status.map((s, index) => (
+              <option key={index} value={s.tipo}>
+                {s.tipo}
+              </option>
+            ))}
+        </select>
+      )}
+    </>
   );
 };
 

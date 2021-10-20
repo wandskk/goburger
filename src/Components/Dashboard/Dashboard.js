@@ -29,7 +29,7 @@ const Dashboard = () => {
       <div className="row">
         {msg !== null && (
           <div className="col-10 offset-md-1">
-            <Message text={msg.text} className={msg.className} />
+            <Message msg={msg} setMsg={setMsg} className={msg.className} />
           </div>
         )}
         <div className={`col-10 offset-md-1 ${styles.burgerTable}`}>
@@ -71,6 +71,7 @@ const Dashboard = () => {
                       <UpdateStatusBurger
                         burgerStatus={status}
                         burgerId={id}
+                        msg={msg}
                         setMsg={setMsg}
                       />
                       <br />
