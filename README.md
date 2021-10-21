@@ -22,10 +22,12 @@
 
 This project build with.
 
-* [VueJS](https://vuejs.org)
-* [Vuetifyjs](https://vuetifyjs.com/)
-* [Vuex](https://vuex.vuejs.org)
-* [Vue Router](https://router.vuejs.org)
+* [ReactJS](https://reactjs.org/)
+* [React Router Dom](https://reactrouter.com/)
+* [json-server](https://www.npmjs.com/package/json-server)
+* [React Animated CSS](https://www.npmjs.com/package/react-animated-css)
+* [Bootstrap](https://getbootstrap.com/)
+
 
 
 
@@ -33,31 +35,23 @@ This project build with.
 ## Getting Started
 1. Clone the repo
    ```sh
-   git clone https://github.com/gilgledson/vuejs-e-commerce
+   git clone https://github.com/wandskk/goburger.git
    ```
-2. acesse fake api
+2. Go to project folder
    ```sh
-   cd vuejs-e-commerce/api
+   cd goburger
    ```
-3. install fake api
+3. install project requires
  ```sh
-   npm install
+   npm install or npm i
  ```
 4. run fake api
 ```sh
-   npm start
+   npm run backend
  ```
-5. Access front-end path
- ```sh
-   cd vuejs-e-commerce/front-end
- ```
-6. Build Docker image
-  ```sh
-   docker-compose up -d --build
- ```
-7. access link
+5. access link
  ```sh 
-    http://localhost:8081/
+    http://localhost:3000/
 ```
 
 <!-- LICENSE -->
@@ -69,15 +63,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 ## Contact
-Project Link: [https://github.com/gilgledson/vuejs-store-example](https://github.com/gilgledson/vuejs-store-example)
+Project Link: [https://github.com/wandskk/goburger](https://github.com/wandskk/goburger)
 
 
 
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: src/Assets/img/print.png
