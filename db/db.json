@@ -78,66 +78,6 @@
     }
   ],
   "burgers": [
-    {
-      "nome": "Jeferson",
-      "carne": "Alcatra",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon",
-        "Cheddar",
-        "Salame",
-        "Tomate",
-        "Cebola roxa"
-      ],
-      "status": "Em produção",
-      "id": 1
-    },
-    {
-      "nome": "Wanderson",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Salame",
-        "Bacon",
-        "Pepino"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
-      "nome": "Wanderson",
-      "carne": "Maminha",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Bacon",
-        "Salame",
-        "Pepino"
-      ],
-      "status": "Solicitado",
-      "id": 3
-    },
-    {
-      "nome": "Wanderson",
-      "carne": "Veggie burger",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Tomate",
-        "Cheddar",
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 4
-    },
-    {
-      "nome": "Wanderson Kenedy",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 5
-    }
+    
   ]
 }
