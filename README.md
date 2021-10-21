@@ -34,13 +34,13 @@ This project build with.
 <!-- GETTING STARTED -->
 ## Getting Started
 1. Clone the repo
-   ```sh
+ ```sh
    git clone https://github.com/wandskk/goburger.git
-   ```
+ ```
 2. Go to project folder
-   ```sh
+ ```sh
    cd goburger
-   ```
+ ```
 3. Install project requires
  ```sh
    npm install or npm i
