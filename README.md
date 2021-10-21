@@ -45,11 +45,15 @@ This project build with.
  ```sh
    npm install or npm i
  ```
-4. Run json-server
+4. Run React App
+```sh
+   npm start
+ ```
+5. Run json-server
 ```sh
    npm run backend
  ```
-5. Access link
+6. Access link
  ```sh 
     http://localhost:3000/
 ```
