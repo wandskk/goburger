@@ -45,7 +45,7 @@ const Dashboard = () => {
               />
             </>
           )}
-          {data && data.length === 0 && <h1>Não há pedidos ainda.</h1>}
+          {data && data.length === 0 && <Title text="Não há pedidos ainda." />}
         </div>
       </div>
     </div>
