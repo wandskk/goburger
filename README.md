@@ -80,4 +80,4 @@ Project Link: [https://github.com/gilgledson/vuejs-store-example](https://github
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/print.png
+[product-screenshot]: src/Assets/img/print.png
