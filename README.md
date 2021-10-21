@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="src/Assets/img/logo-preta.png" alt="Logo" width="100%" style="border-radius: 50px;">
+    <img src="src/Assets/img/logo-preta.png" alt="Logo" width="100%">
   </a>
 
   <h3 align="center">REACT JS BURGER COMMERCE</h3>
