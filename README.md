@@ -41,15 +41,15 @@ This project build with.
    ```sh
    cd goburger
    ```
-3. install project requires
+3. Install project requires
  ```sh
    npm install or npm i
  ```
-4. run fake api
+4. Run json-server
 ```sh
    npm run backend
  ```
-5. access link
+5. Access link
  ```sh 
     http://localhost:3000/
 ```
