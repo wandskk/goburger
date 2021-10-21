@@ -19,7 +19,7 @@ const Banner = () => {
           animationOutDuration={2000}
           isVisible={true}
         >
-          <div className={styles.title}>Faça seu Hamburger</div>
+          <div className={styles.title}>Make your burger</div>
         </Animated>
       </section>
     </Animated>
