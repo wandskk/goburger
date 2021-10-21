@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <br />
-<p align="center" style="background: #e1e1e1 !important;">
+<p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="src/Assets/img/logo-preta.png" alt="Logo" width="160">
   </a>
