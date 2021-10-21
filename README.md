@@ -2,7 +2,7 @@
 <br />
 <p align="center" style="background: #e1e1e1 !important;">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="src/Assets/img/logo.png" alt="Logo" width="160">
+    <img src="src/Assets/img/logo-preta.png" alt="Logo" width="160">
   </a>
 
   <h3 align="center">VUEJS E-COMMERCE EXAMPLE</h3>
