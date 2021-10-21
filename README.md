@@ -5,10 +5,10 @@
     <img src="src/Assets/img/logo-preta.png" alt="Logo" width="160">
   </a>
 
-  <h3 align="center">VUEJS E-COMMERCE EXAMPLE</h3>
+  <h3 align="center">REACT JS BURGER COMMERCE</h3>
 
   <p align="center">
-    An e-commerce with vuejs,vuetifyjs,vuex and vue-router!
+    An BURGER COMMERCE with ReactJS, React-router-dom, json-server, React Animated CSS and Bootstrap !
     <br />
   </p>
 </p>
